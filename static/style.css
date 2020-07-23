@@ -1,0 +1,63 @@
+.game {
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.block {
+    width: 30%;
+    height: 100%;
+}
+
+.mid {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.readybtn {
+    width: 60%;
+    height: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15%;
+}
+
+.ships4 {
+    background: url('/static/img/4ships.png');
+}
+
+.ships3 {
+    background: url('/static/img/3ships.png');
+}
+
+.ships2 {
+    background: url('/static/img/2ships.png');
+}
+
+.ships1 {
+    background: url('/static/img/1ship.png');
+}
+
+.atacked {
+    background: url('/static/img/atacked.png');
+}
+
+.miss {
+    background: url('/static/img/miss.png');
+}
+
+.water {
+    background: url('/static/img/water.png');
+}
+
+button {
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+}

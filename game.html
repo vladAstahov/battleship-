@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Наша многопользовательская игра</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="game">
+      <table class="block">
+        <tr>
+          <td><button onclick="clickbtnfn(1)" id="1" value="0"></button></td>
+          <td><button onclick="clickbtnfn(2)" id="2" value="0"></button></td>
+          <td><button onclick="clickbtnfn(3)" id="3" value="0"></button></td>
+          <td><button onclick="clickbtnfn(4)" id="4" value="0"></button></td>
+          <td><button onclick="clickbtnfn(5)" id="5" value="0"></button></td>
+          <td><button onclick="clickbtnfn(6)" id="6" value="0"></button></td>
+          <td><button onclick="clickbtnfn(7)" id="7" value="0"></button></td>
+          <td><button onclick="clickbtnfn(8)" id="8" value="0"></button></td>
+          <td><button onclick="clickbtnfn(9)" id="9" value="0"></button></td>
+          <td><button onclick="clickbtnfn(10)" id="10" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="clickbtnfn(11)" id="11" value="0"></button></td>
+          <td><button onclick="clickbtnfn(12)" id="12" value="0"></button></td>
+          <td><button onclick="clickbtnfn(13)" id="13" value="0"></button></td>
+          <td><button onclick="clickbtnfn(14)" id="14" value="0"></button></td>
+          <td><button onclick="clickbtnfn(15)" id="15" value="0"></button></td>
+          <td><button onclick="clickbtnfn(16)" id="16" value="0"></button></td>
+          <td><button onclick="clickbtnfn(17)" id="17" value="0"></button></td>
+          <td><button onclick="clickbtnfn(18)" id="18" value="0"></button></td>
+          <td><button onclick="clickbtnfn(19)" id="19" value="0"></button></td>
+          <td><button onclick="clickbtnfn(20)" id="20" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="clickbtnfn(21)" id="21" value="0"></button></td>
+          <td><button onclick="clickbtnfn(22)" id="22" value="0"></button></td>
+          <td><button onclick="clickbtnfn(23)" id="23" value="0"></button></td>
+          <td><button onclick="clickbtnfn(24)" id="24" value="0"></button></td>
+          <td><button onclick="clickbtnfn(25)" id="25" value="0"></button></td>
+          <td><button onclick="clickbtnfn(26)" id="26" value="0"></button></td>
+          <td><button onclick="clickbtnfn(27)" id="27" value="0"></button></td>
+          <td><button onclick="clickbtnfn(28)" id="28" value="0"></button></td>
+          <td><button onclick="clickbtnfn(29)" id="29" value="0"></button></td>
+          <td><button onclick="clickbtnfn(30)" id="30" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="clickbtnfn(31)" id="31" value="0"></button></td>
+          <td><button onclick="clickbtnfn(32)" id="32" value="0"></button></td>
+          <td><button onclick="clickbtnfn(33)" id="33" value="0"></button></td>
+          <td><button onclick="clickbtnfn(34)" id="34" value="0"></button></td>
+          <td><button onclick="clickbtnfn(35)" id="35" value="0"></button></td>
+          <td><button onclick="clickbtnfn(36)" id="36" value="0"></button></td>
+          <td><button onclick="clickbtnfn(37)" id="37" value="0"></button></td>
+          <td><button onclick="clickbtnfn(38)" id="38" value="0"></button></td>
+          <td><button onclick="clickbtnfn(39)" id="39" value="0"></button></td>
+          <td><button onclick="clickbtnfn(40)" id="40" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="clickbtnfn(41)" id="41" value="0"></button></td>
+          <td><button onclick="clickbtnfn(42)" id="42" value="0"></button></td>
+          <td><button onclick="clickbtnfn(43)" id="43" value="0"></button></td>
+          <td><button onclick="clickbtnfn(44)" id="44" value="0"></button></td>
+          <td><button onclick="clickbtnfn(45)" id="45" value="0"></button></td>
+          <td><button onclick="clickbtnfn(46)" id="46" value="0"></button></td>
+          <td><button onclick="clickbtnfn(47)" id="47" value="0"></button></td>
+          <td><button onclick="clickbtnfn(48)" id="48" value="0"></button></td>
+          <td><button onclick="clickbtnfn(49)" id="49" value="0"></button></td>
+          <td><button onclick="clickbtnfn(50)" id="50" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="clickbtnfn(51)" id="51" value="0"></button></td>
+          <td><button onclick="clickbtnfn(52)" id="52" value="0"></button></td>
+          <td><button onclick="clickbtnfn(53)" id="53" value="0"></button></td>
+          <td><button onclick="clickbtnfn(54)" id="54" value="0"></button></td>
+          <td><button onclick="clickbtnfn(55)" id="55" value="0"></button></td>
+          <td><button onclick="clickbtnfn(56)" id="56" value="0"></button></td>
+          <td><button onclick="clickbtnfn(57)" id="57" value="0"></button></td>
+          <td><button onclick="clickbtnfn(58)" id="58" value="0"></button></td>
+          <td><button onclick="clickbtnfn(59)" id="59" value="0"></button></td>
+          <td><button onclick="clickbtnfn(60)" id="60" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="clickbtnfn(61)" id="61" value="0"></button></td>
+          <td><button onclick="clickbtnfn(62)" id="62" value="0"></button></td>
+          <td><button onclick="clickbtnfn(63)" id="63" value="0"></button></td>
+          <td><button onclick="clickbtnfn(64)" id="64" value="0"></button></td>
+          <td><button onclick="clickbtnfn(65)" id="65" value="0"></button></td>
+          <td><button onclick="clickbtnfn(66)" id="66" value="0"></button></td>
+          <td><button onclick="clickbtnfn(67)" id="67" value="0"></button></td>
+          <td><button onclick="clickbtnfn(68)" id="68" value="0"></button></td>
+          <td><button onclick="clickbtnfn(69)" id="69" value="0"></button></td>
+          <td><button onclick="clickbtnfn(70)" id="70" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="clickbtnfn(71)" id="71" value="0"></button></td>
+          <td><button onclick="clickbtnfn(72)" id="72" value="0"></button></td>
+          <td><button onclick="clickbtnfn(73)" id="73" value="0"></button></td>
+          <td><button onclick="clickbtnfn(74)" id="74" value="0"></button></td>
+          <td><button onclick="clickbtnfn(75)" id="75" value="0"></button></td>
+          <td><button onclick="clickbtnfn(76)" id="76" value="0"></button></td>
+          <td><button onclick="clickbtnfn(77)" id="77" value="0"></button></td>
+          <td><button onclick="clickbtnfn(78)" id="78" value="0"></button></td>
+          <td><button onclick="clickbtnfn(79)" id="79" value="0"></button></td>
+          <td><button onclick="clickbtnfn(80)" id="80" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="clickbtnfn(81)" id="81" value="0"></button></td>
+          <td><button onclick="clickbtnfn(82)" id="82" value="0"></button></td>
+          <td><button onclick="clickbtnfn(83)" id="83" value="0"></button></td>
+          <td><button onclick="clickbtnfn(84)" id="84" value="0"></button></td>
+          <td><button onclick="clickbtnfn(85)" id="85" value="0"></button></td>
+          <td><button onclick="clickbtnfn(86)" id="86" value="0"></button></td>
+          <td><button onclick="clickbtnfn(87)" id="87" value="0"></button></td>
+          <td><button onclick="clickbtnfn(88)" id="88" value="0"></button></td>
+          <td><button onclick="clickbtnfn(89)" id="89" value="0"></button></td>
+          <td><button onclick="clickbtnfn(90)" id="90" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="clickbtnfn(91)" id="91" value="0"></button></td>
+          <td><button onclick="clickbtnfn(92)" id="92" value="0"></button></td>
+          <td><button onclick="clickbtnfn(93)" id="93" value="0"></button></td>
+          <td><button onclick="clickbtnfn(94)" id="94" value="0"></button></td>
+          <td><button onclick="clickbtnfn(95)" id="95" value="0"></button></td>
+          <td><button onclick="clickbtnfn(96)" id="96" value="0"></button></td>
+          <td><button onclick="clickbtnfn(97)" id="97" value="0"></button></td>
+          <td><button onclick="clickbtnfn(98)" id="98" value="0"></button></td>
+          <td><button onclick="clickbtnfn(99)" id="99" value="0"></button></td>
+          <td><button onclick="clickbtnfn(100)" id="100" value="0"></button></td>
+        </tr>
+      </table>
+      <div class="mid">
+        <select name="select_5">
+          <option selected="selected" disabled="disabled">Выбор:</option>
+          <option id="1" value="4">4 палубы</option>
+          <option id="2" value="3">3 палубы</option>
+          <option id="3" value="2">2 палубы</option>
+          <option id="4" value="1">1 палуба</option>
+        </select>
+        <button class="readybtn" onclick="isready()">Готов</button>
+      </div>
+      <table class="block">
+        <tr>
+          <td><button onclick="attack('1e')" id="1e" value="0"></button></td>
+          <td><button onclick="attack('2e')" id="2e" value="0"></button></td>
+          <td><button onclick="attack('3e')" id="3e" value="0"></button></td>
+          <td><button onclick="attack('4e')" id="4e" value="0"></button></td>
+          <td><button onclick="attack('5e')" id="5e" value="0"></button></td>
+          <td><button onclick="attack('6e')" id="6e" value="0"></button></td>
+          <td><button onclick="attack('7e')" id="7e" value="0"></button></td>
+          <td><button onclick="attack('8e')" id="8e" value="0"></button></td>
+          <td><button onclick="attack('9e')" id="9e" value="0"></button></td>
+          <td><button onclick="attack('10e')" id="10e" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="attack('11e')" id="11e" value="0"></button></td>
+          <td><button onclick="attack('12e')" id="12e" value="0"></button></td>
+          <td><button onclick="attack('13e')" id="13e" value="0"></button></td>
+          <td><button onclick="attack('14e')" id="14e" value="0"></button></td>
+          <td><button onclick="attack('15e')" id="15e" value="0"></button></td>
+          <td><button onclick="attack('16e')" id="16e" value="0"></button></td>
+          <td><button onclick="attack('17e')" id="17e" value="0"></button></td>
+          <td><button onclick="attack('18e')" id="18e" value="0"></button></td>
+          <td><button onclick="attack('19e')" id="19e" value="0"></button></td>
+          <td><button onclick="attack('20e')" id="20e" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="attack('21e')" id="21e" value="0"></button></td>
+          <td><button onclick="attack('22e')" id="22e" value="0"></button></td>
+          <td><button onclick="attack('23e')" id="23e" value="0"></button></td>
+          <td><button onclick="attack('24e')" id="24e" value="0"></button></td>
+          <td><button onclick="attack('25e')" id="25e" value="0"></button></td>
+          <td><button onclick="attack('26e')" id="26e" value="0"></button></td>
+          <td><button onclick="attack('27e')" id="27e" value="0"></button></td>
+          <td><button onclick="attack('28e')" id="28e" value="0"></button></td>
+          <td><button onclick="attack('29e')" id="29e" value="0"></button></td>
+          <td><button onclick="attack('30e')" id="30e" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="attack('31e')" id="31e" value="0"></button></td>
+          <td><button onclick="attack('32e')" id="32e" value="0"></button></td>
+          <td><button onclick="attack('33e')" id="33e" value="0"></button></td>
+          <td><button onclick="attack('34e')" id="34e" value="0"></button></td>
+          <td><button onclick="attack('35e')" id="35e" value="0"></button></td>
+          <td><button onclick="attack('36e')" id="36e" value="0"></button></td>
+          <td><button onclick="attack('37e')" id="37e" value="0"></button></td>
+          <td><button onclick="attack('38e')" id="38e" value="0"></button></td>
+          <td><button onclick="attack('39e')" id="39e" value="0"></button></td>
+          <td><button onclick="attack('40e')" id="40e" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="attack('41e')" id="41e" value="0"></button></td>
+          <td><button onclick="attack('42e')" id="42e" value="0"></button></td>
+          <td><button onclick="attack('43e')" id="43e" value="0"></button></td>
+          <td><button onclick="attack('44e')" id="44e" value="0"></button></td>
+          <td><button onclick="attack('45e')" id="45e" value="0"></button></td>
+          <td><button onclick="attack('46e')" id="46e" value="0"></button></td>
+          <td><button onclick="attack('47e')" id="47e" value="0"></button></td>
+          <td><button onclick="attack('48e')" id="48e" value="0"></button></td>
+          <td><button onclick="attack('49e')" id="49e" value="0"></button></td>
+          <td><button onclick="attack('50e')" id="50e" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="attack('51e')" id="51e" value="0"></button></td>
+          <td><button onclick="attack('52e')" id="52e" value="0"></button></td>
+          <td><button onclick="attack('53e')" id="53e" value="0"></button></td>
+          <td><button onclick="attack('54e')" id="54e" value="0"></button></td>
+          <td><button onclick="attack('55e')" id="55e" value="0"></button></td>
+          <td><button onclick="attack('56e')" id="56e" value="0"></button></td>
+          <td><button onclick="attack('57e')" id="57e" value="0"></button></td>
+          <td><button onclick="attack('58e')" id="58e" value="0"></button></td>
+          <td><button onclick="attack('59e')" id="59e" value="0"></button></td>
+          <td><button onclick="attack('60e')" id="60e" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="attack('61e')" id="61e" value="0"></button></td>
+          <td><button onclick="attack('62e')" id="62e" value="0"></button></td>
+          <td><button onclick="attack('63e')" id="63e" value="0"></button></td>
+          <td><button onclick="attack('64e')" id="64e" value="0"></button></td>
+          <td><button onclick="attack('65e')" id="65e" value="0"></button></td>
+          <td><button onclick="attack('66e')" id="66e" value="0"></button></td>
+          <td><button onclick="attack('67e')" id="67e" value="0"></button></td>
+          <td><button onclick="attack('68e')" id="68e" value="0"></button></td>
+          <td><button onclick="attack('69e')" id="69e" value="0"></button></td>
+          <td><button onclick="attack('70e')" id="70e" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="attack('71e')" id="71e" value="0"></button></td>
+          <td><button onclick="attack('72e')" id="72e" value="0"></button></td>
+          <td><button onclick="attack('73e')" id="73e" value="0"></button></td>
+          <td><button onclick="attack('74e')" id="74e" value="0"></button></td>
+          <td><button onclick="attack('75e')" id="75e" value="0"></button></td>
+          <td><button onclick="attack('76e')" id="76e" value="0"></button></td>
+          <td><button onclick="attack('77e')" id="77e" value="0"></button></td>
+          <td><button onclick="attack('78e')" id="78e" value="0"></button></td>
+          <td><button onclick="attack('79e')" id="79e" value="0"></button></td>
+          <td><button onclick="attack('80e')" id="80e" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="attack('81e')" id="81e" value="0"></button></td>
+          <td><button onclick="attack('82e')" id="82e" value="0"></button></td>
+          <td><button onclick="attack('83e')" id="83e" value="0"></button></td>
+          <td><button onclick="attack('84e')" id="84e" value="0"></button></td>
+          <td><button onclick="attack('85e')" id="85e" value="0"></button></td>
+          <td><button onclick="attack('86e')" id="86e" value="0"></button></td>
+          <td><button onclick="attack('87e')" id="87e" value="0"></button></td>
+          <td><button onclick="attack('88e')" id="88e" value="0"></button></td>
+          <td><button onclick="attack('89e')" id="89e" value="0"></button></td>
+          <td><button onclick="attack('90e')" id="90e" value="0"></button></td>
+        </tr>
+        <tr>
+          <td><button onclick="attack('91e')" id="91e" value="0"></button></td>
+          <td><button onclick="attack('92e')" id="92e" value="0"></button></td>
+          <td><button onclick="attack('93e')" id="93e" value="0"></button></td>
+          <td><button onclick="attack('94e')" id="94e" value="0"></button></td>
+          <td><button onclick="attack('95e')" id="95e" value="0"></button></td>
+          <td><button onclick="attack('96e')" id="96e" value="0"></button></td>
+          <td><button onclick="attack('97e')" id="97e" value="0"></button></td>
+          <td><button onclick="attack('98e')" id="98e" value="0"></button></td>
+          <td><button onclick="attack('99e')" id="99e" value="0"></button></td>
+          <td><button onclick="attack('100e')" id="100e" value="0"></button></td>
+        </tr>
+      </table>
+    </div>
+    
+    <script src="/static/game.js"></script>
+  </body>
+</html>
